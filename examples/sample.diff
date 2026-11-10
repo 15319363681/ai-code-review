@@ -1,0 +1,15 @@
+diff --git a/examples/sample.py b/examples/sample.py
+index 1111111..2222222 100644
+--- a/examples/sample.py
++++ b/examples/sample.py
+@@ -10,7 +10,12 @@
+ def get_user(user_id):
+-    return db.query(user_id)
++    # 故意埋的 3 个问题：SQL 注入、硬编码密钥、空 except
++    query = "SELECT * FROM users WHERE id = " + user_id
++    cursor.execute(query)
++    api_key = "sk-live-123456"
++    try:
++        return cursor.fetchall()
++    except:
++        pass
