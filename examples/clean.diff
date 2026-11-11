@@ -1,0 +1,11 @@
+diff --git a/examples/clean.py b/examples/clean.py
+index 1111111..2222222 100644
+--- a/examples/clean.py
++++ b/examples/clean.py
+@@ -1,3 +1,5 @@
+ def add(a, b):
+-    return 0
++    return a + b
++
++
++result = add(1, 2)

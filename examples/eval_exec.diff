@@ -1,0 +1,9 @@
+diff --git a/examples/danger.py b/examples/danger.py
+index 1111111..2222222 100644
+--- a/examples/danger.py
++++ b/examples/danger.py
+@@ -1,3 +1,4 @@
+ def run_user_code(user_input):
+-    return None
++    result = eval(user_input)
++    return result
